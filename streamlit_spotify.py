@@ -18,6 +18,17 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+st.markdown(
+    """
+    <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/4oaf8rsMeLhKmpJFn2iPqy?utm_source=generator" 
+        width="100%" height="380" frameBorder="0" 
+        allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+    </iframe>
+    """,
+    unsafe_allow_html=True
+)
 unique_moods = sorted(df['cluster'].unique())
 selected_mood = st.sidebar.selectbox("Choose a Mood", unique_moods)
 all_genres = sorted(df['genre'].unique())
